@@ -32,7 +32,7 @@ namespace Test
             Assert.Throws<Exception>(() => water.Run());
 
         }
-
+         
         [Test]
         public void Test_BearTask()
         {
