@@ -39,6 +39,7 @@ namespace LibOilWater.WaterTask
         {
             if (InputValue is null || InputValue.Count() is default(int))
                 throw new Exception("Колеекция не может быть Null");
+
             List<uint> list = InputValue.ToList(); //Работая с IEnumerable - производится пересчет, поэтому в данном случае лучше привести к List и работать со списком
             uint leftBorder = list.First();
             Range range = default;
@@ -66,7 +67,6 @@ namespace LibOilWater.WaterTask
         public uint Run()
         {
             FindFirstPuddle();
-
             SquareWater();
 
             return ResultCollection;

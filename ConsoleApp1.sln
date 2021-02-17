@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{A913D4EA-B8B1-463A-8DBC-564062E970EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibOilWater", "LibOilWater\LibOilWater.csproj", "{DBEB9D42-D084-4052-83FF-4084A795F586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibOilWater", "LibOilWater\LibOilWater.csproj", "{DBEB9D42-D084-4052-83FF-4084A795F586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F6E9D53A-D00D-4F44-B26E-B15CDF544D37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{F6E9D53A-D00D-4F44-B26E-B15CDF544D37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

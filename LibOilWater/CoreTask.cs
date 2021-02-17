@@ -17,9 +17,9 @@ namespace LibOilWater
 
         private IRunTask<uint> _bearTask;
 
-        private IRunTask<uint> _waterResultUintValue;
-
         private IRunTask<int> _nastyaTask;
+
+        private IRunTask<uint> _waterResultUintValue;
 
 #endregion
 
@@ -34,9 +34,9 @@ namespace LibOilWater
         public static CoreTask GeCoreTask() => coreTask ??= new();
 
         public IRunTask<uint> GetBearTask(uint n, uint k, IList<uint> collectionValue) => _bearTask = new BearTask.BearTask(n, k, collectionValue);
-        public IRunTask<uint> GeWaterTaskUintValue(IList<uint> inputEnumerable) => _waterResultUintValue = new WaterTaskUintTypeValue(inputEnumerable);
 
         public IRunTask<int> GetNastyaTask(int n, IList<int> collection) => _nastyaTask = new NastyaTask(n, collection);
+        public IRunTask<uint> GeWaterTaskUintValue(IList<uint> inputEnumerable) => _waterResultUintValue = new WaterTaskUintTypeValue(inputEnumerable);
 
 #endregion
     }

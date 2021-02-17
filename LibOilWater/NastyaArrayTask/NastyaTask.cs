@@ -8,19 +8,10 @@ namespace LibOilWater.NastyaArrayTask
     {
 #region Constructors
 
-        internal NastyaTask(int n,IList<int> collection)
+        internal NastyaTask(int n, IList<int> collection)
         {
-            Validate(n,collection);
+            Validate(n, collection);
             InputValue = collection;
-        }
-
-        private void Validate(int n, IList<int> collection)
-        {
-            if (collection is null)
-                throw new ArgumentNullException("Массив не должен быть Null");
-            if (collection.Count != n)
-                throw new IndexOutOfRangeException("Значение n должно соответсвовать размерности массива");
-            
         }
 
 #endregion
@@ -45,6 +36,14 @@ namespace LibOilWater.NastyaArrayTask
             GetTimeIntArrayWork();
 
             return ResultCollection;
+        }
+
+        private void Validate(int n, IList<int> collection)
+        {
+            if (collection is null)
+                throw new ArgumentNullException("Массив не должен быть Null");
+            if (collection.Count != n)
+                throw new IndexOutOfRangeException("Значение n должно соответсвовать размерности массива");
         }
 
 #endregion

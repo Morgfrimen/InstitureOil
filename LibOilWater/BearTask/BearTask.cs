@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace LibOilWater.BearTask
 {
@@ -61,7 +60,7 @@ namespace LibOilWater.BearTask
                     isLeft = false;
 
                     if (a > _k)
-                        return ;
+                        return;
                 }
 
                 if (a > _k)
