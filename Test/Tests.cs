@@ -73,19 +73,19 @@ namespace Test
         [Test]
         public void Test_Water()
         {
-            IRunTask<uint> water = CoreTask.GeCoreTask().GeWaterTaskUintValue(new uint[] {2, 5, 1, 2, 3, 4, 7, 7, 6});
+            IRunTask<uint> water = CoreTask.GeCoreTask().GetWaterTaskUintValue(new uint[] {2, 5, 1, 2, 3, 4, 7, 7, 6});
             uint square = water.Run();
             Assert.AreEqual(square, 10);
             CollectionAssert.AreEqual((water as IInputCollection<uint>).InputValue, new uint[] {2, 5, 1, 2, 3, 4, 7, 7, 6});
             Assert.AreEqual((water as IResult<uint>).ResultCollection, square);
-            water = CoreTask.GeCoreTask().GeWaterTaskUintValue(new uint[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1});
+            water = CoreTask.GeCoreTask().GetWaterTaskUintValue(new uint[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1});
             square = water.Run();
             Assert.AreEqual(square, 0);
-            water = CoreTask.GeCoreTask().GeWaterTaskUintValue(null);
+            water = CoreTask.GeCoreTask().GetWaterTaskUintValue(null);
             Assert.Throws<Exception>(() => water.Run());
-            water = CoreTask.GeCoreTask().GeWaterTaskUintValue(new uint[] { });
+            water = CoreTask.GeCoreTask().GetWaterTaskUintValue(new uint[] { });
             Assert.Throws<Exception>(() => water.Run());
-            water = CoreTask.GeCoreTask().GeWaterTaskUintValue(new uint[] {0, 0, 0, 0, 0, 0});
+            water = CoreTask.GeCoreTask().GetWaterTaskUintValue(new uint[] {0, 0, 0, 0, 0, 0});
             Assert.Throws<Exception>(() => water.Run());
         }
 

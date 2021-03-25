@@ -74,8 +74,8 @@ void RunTaskWater()
             list.Add(value);
     }
 
-    IRunTask<uint> nastyaTask = CoreTask.GeCoreTask().GeWaterTaskUintValue(list);
-    Console.WriteLine($"Результат: {nastyaTask.Run()}");
+    IRunTask<uint> waterTask = CoreTask.GeCoreTask().GetWaterTaskUintValue(list);
+    Console.WriteLine($"Результат: {waterTask.Run()}");
 }
 
 void RunTaskNastya()
