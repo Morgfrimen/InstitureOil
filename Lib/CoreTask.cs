@@ -1,43 +1,20 @@
 ﻿using System.Collections.Generic;
 
-using LibOilWater.NastyaArrayTask;
-using LibOilWater.WaterTask;
+using Lib.NastyaArrayTask;
+using Lib.WaterTask;
 
-namespace LibOilWater
+namespace Lib
 {
-    public sealed class CoreTask
-    {
-#region Static Fields and Constants
+	public static class CoreTask
+	{
 
-        private static CoreTask coreTask;
+		#region Methods
 
-#endregion
+		public static IRunTask<uint> GetBearTask(uint n, uint k, IList<uint> collectionValue) => new BearTask.BearTask(n, k, collectionValue);
 
-#region Fields
+		public static IRunTask<int> GetNastyaTask(int n, IList<int> collection) => new NastyaTask(n, collection);
+		public static IRunTask<uint> GetWaterTaskUintValue(IList<uint> inputEnumerable) => new WaterTaskUintTypeValue(inputEnumerable);
 
-        private IRunTask<uint> _bearTask;
-
-        private IRunTask<int> _nastyaTask;
-
-        private IRunTask<uint> _waterResultUintValue;
-
-#endregion
-
-#region Constructors
-
-        private CoreTask() { }
-
-#endregion
-
-#region Methods
-
-        public static CoreTask GeCoreTask() => coreTask ??= new();
-
-        public IRunTask<uint> GetBearTask(uint n, uint k, IList<uint> collectionValue) => _bearTask = new BearTask.BearTask(n, k, collectionValue);
-
-        public IRunTask<int> GetNastyaTask(int n, IList<int> collection) => _nastyaTask = new NastyaTask(n, collection);
-        public IRunTask<uint> GetWaterTaskUintValue(IList<uint> inputEnumerable) => _waterResultUintValue = new WaterTaskUintTypeValue(inputEnumerable);
-
-#endregion
-    }
+		#endregion
+	}
 }

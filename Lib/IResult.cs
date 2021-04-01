@@ -1,4 +1,4 @@
-﻿namespace LibOilWater
+﻿namespace Lib
 {
     public interface IResult<T> where T : struct
     {

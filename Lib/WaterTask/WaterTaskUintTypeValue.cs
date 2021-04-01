@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LibOilWater.WaterTask
+namespace Lib.WaterTask
 {
     internal sealed class WaterTaskUintTypeValue : IRunTask<uint>, IResult<uint>, IInputCollection<uint>
     {
@@ -37,7 +37,7 @@ namespace LibOilWater.WaterTask
         /// <returns>true- если всё прошло без ошибок, false - если произошла ошибка</returns>
         private void FindFirstPuddle(uint index = default)
         {
-            if (InputValue is null || InputValue.Count() is default(int))
+            if (InputValue is null || InputValue.Count is default(int))
                 throw new Exception("Колеекция не может быть Null");
 
             List<uint> list = InputValue.ToList(); //Работая с IEnumerable - производится пересчет, поэтому в данном случае лучше привести к List и работать со списком

@@ -1,4 +1,4 @@
-﻿namespace LibOilWater
+﻿namespace Lib
 {
     public interface IRunTask<T> where T : struct
     {

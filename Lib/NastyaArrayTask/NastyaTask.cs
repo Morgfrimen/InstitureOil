@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LibOilWater.NastyaArrayTask
+namespace Lib.NastyaArrayTask
 {
     internal sealed class NastyaTask : IRunTask<int>, IResult<int>, IInputCollection<int>
     {
@@ -10,7 +10,7 @@ namespace LibOilWater.NastyaArrayTask
 
         internal NastyaTask(int n, IList<int> collection)
         {
-            Validate(n, collection);
+			Validate(n, collection);
             InputValue = collection;
         }
 
@@ -26,10 +26,7 @@ namespace LibOilWater.NastyaArrayTask
 
 #region Methods
 
-        private void GetTimeIntArrayWork()
-        {
-            ResultCollection = InputValue.Distinct().Count(item => item != 0);
-        }
+        private void GetTimeIntArrayWork() => ResultCollection = InputValue.Distinct().Count(item => item != 0);
 
         public int Run()
         {
@@ -38,10 +35,10 @@ namespace LibOilWater.NastyaArrayTask
             return ResultCollection;
         }
 
-        private void Validate(int n, IList<int> collection)
+        private static void Validate(int n, IList<int> collection)
         {
             if (collection is null)
-                throw new ArgumentNullException("Массив не должен быть Null");
+                throw new ArgumentNullException(nameof(NastyaTask), $"Массив не должен быть Null");
             if (collection.Count != n)
                 throw new IndexOutOfRangeException("Значение n должно соответсвовать размерности массива");
         }

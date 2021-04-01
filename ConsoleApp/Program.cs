@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using LibOilWater;
+using Lib;
 
 const char commandWater = '1';
 const char commandBear = '2';
@@ -74,7 +74,7 @@ void RunTaskWater()
             list.Add(value);
     }
 
-    IRunTask<uint> waterTask = CoreTask.GeCoreTask().GetWaterTaskUintValue(list);
+    IRunTask<uint> waterTask = CoreTask.GetWaterTaskUintValue(list);
     Console.WriteLine($"Результат: {waterTask.Run()}");
 }
 
@@ -95,7 +95,7 @@ void RunTaskNastya()
             list.Add(value);
     }
 
-    IRunTask<int> nastyaTask = CoreTask.GeCoreTask().GetNastyaTask(n, list);
+    IRunTask<int> nastyaTask = CoreTask.GetNastyaTask(n, list);
     Console.WriteLine($"Результат: {nastyaTask.Run()}");
 }
 
@@ -122,6 +122,6 @@ void RunTaskBear()
             list.Add(value);
     }
 
-    IRunTask<uint> bear = CoreTask.GeCoreTask().GetBearTask(n, k, list);
+    IRunTask<uint> bear = CoreTask.GetBearTask(n, k, list);
     Console.WriteLine($"Результат: {bear.Run()}");
 }

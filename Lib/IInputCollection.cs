@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LibOilWater
+namespace Lib
 {
     public interface IInputCollection<TInput> where TInput : struct
     {

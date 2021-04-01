@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LibOilWater.BearTask
+namespace Lib.BearTask
 {
     internal sealed class BearTask : IRunTask<uint>, IResult<uint>, IInputCollection<uint>
     {
@@ -16,7 +16,7 @@ namespace LibOilWater.BearTask
 
         internal BearTask(uint n, uint k, IList<uint> collectionTaskBear)
         {
-            ValidateData(n, k, collectionTaskBear);
+			ValidateData(n, k, collectionTaskBear);
             _n = n;
             _k = k;
             InputValue = collectionTaskBear;
@@ -79,7 +79,7 @@ namespace LibOilWater.BearTask
             return ResultCollection;
         }
 
-        private void ValidateData(uint n, uint k, IList<uint> collectionTaskBear)
+        private static void ValidateData(uint n, uint k, IList<uint> collectionTaskBear)
         {
             if (collectionTaskBear is null)
                 throw new NullReferenceException("Значение массива не может быть NULL");
