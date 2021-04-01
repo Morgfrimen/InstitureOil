@@ -7,7 +7,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\LibOilWater\LibOilWater.csproj" />
+	  <ProjectReference Include="..\Lib\Lib.csproj" />
 	</ItemGroup>
 
 </Project>
